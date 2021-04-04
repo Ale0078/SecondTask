@@ -1,5 +1,4 @@
 ﻿using System;
-using LibToTasks.Validation;
 
 namespace SecondTask
 {
@@ -8,7 +7,6 @@ namespace SecondTask
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Validator validator = new();
         }
     }
 }
