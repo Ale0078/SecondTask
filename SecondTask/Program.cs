@@ -1,12 +1,8 @@
 ﻿using System;
 
-namespace SecondTask
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
+using SecondTask;
+
+Startup progectStartup = new Startup();
+progectStartup.Start(args);
+
+Console.ReadKey();
