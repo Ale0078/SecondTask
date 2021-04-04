@@ -5,7 +5,7 @@ namespace SecondTask.Logic.UserInterface.Abstracts
 {
     public abstract class Model
     {
-        public Envelope EnvelopeToCompare { get; private set; }
+        public Envelope EnvelopeToCompare { get; protected set; }
 
         public Model(Envelope envelopeToCompare) 
         {
