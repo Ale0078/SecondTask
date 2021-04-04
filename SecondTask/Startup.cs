@@ -2,6 +2,7 @@
 using NLog;
 using static System.Console;
 
+using SecondTask.Messages;
 using SecondTask.Controllers;
 using SecondTask.Models;
 using SecondTask.Views;
@@ -42,7 +43,9 @@ namespace SecondTask
             {
                 CheckSuitableOfEnvelopes(envelopeController);
 
-                SetBoolenFlage(out bool flage);
+                SetBooleanFlage(out bool flage);
+
+                Clear();
 
                 while (flage)
                 {
@@ -50,17 +53,16 @@ namespace SecondTask
 
                     CheckSuitableOfEnvelopes(envelopeController);
 
-                    SetBoolenFlage(out flage);
+                    SetBooleanFlage(out flage);
 
                     Clear();
                 }
             }
             catch (FormatException ex)
             {
-                _logger.Error("{0}: {1}", ex, ex.Message);
+                _logger.Error(LoggerMessage.STARTUP_ERROR, ex, ex.Message);
 
-                WriteLine("Please, enter width of envelop and height of envelop like double.\n" +
-                    "Bouth of these values have to be more than 2 and less than 100\n");
+                WriteLine(ExceptionMessage.USER_MESSAGE);
             }
         }
 
@@ -68,38 +70,38 @@ namespace SecondTask
         {
             if (envelopeController.CompareEnvelopes(CreateEnvelop()))
             {
-                envelopeController.Display("You can push one envelope other envelope");
+                envelopeController.Display(DisplayMessage.DISPLAY_SUETABLE);
             }
             else
             {
-                envelopeController.Display("You cannot push one envelope other envelope");
+                envelopeController.Display(DisplayMessage.DISPLAY_UNSUETABLE);
             }
         }
 
         private Envelope CreateEnvelop() 
         {
-            Write("Enter width of envelope: ");
+            Write(ExceptionMessage.CREATE_ENVELOPE_WIDTH);
             double widthOfEnvelope = GetCheckedDoubleFromString(ReadLine());
 
             if (widthOfEnvelope == 0.0) 
             {
-                throw new FormatException("Width of envelop has to be more than 2 and less than 100.");
+                throw new FormatException(ExceptionMessage.FORMAT_EXCEPTION_WIDTH);
             }
 
-            Write("Enter height of envelope: ");
+            Write(ExceptionMessage.CREATE_ENVELOPE_HEIGHT);
             double heightofEnvelope = GetCheckedDoubleFromString(ReadLine());
 
             if (heightofEnvelope == 0.0)
             {
-                throw new FormatException("Height of envelop has to be more than 2 and less than 100.");
+                throw new FormatException(ExceptionMessage.FORMAT_EXCEPTION_HEIGHT);
             }
 
             return new Envelope(widthOfEnvelope, heightofEnvelope);
         }
 
-        private void SetBoolenFlage(out bool flage) 
+        private void SetBooleanFlage(out bool flage) 
         {
-            WriteLine("Do you want to continue? (y - yes)");
+            WriteLine(ExceptionMessage.SET_BOOLEAN_FLAGE);
 
             switch (ReadKey().Key) 
             {
@@ -130,12 +132,9 @@ namespace SecondTask
             }
             catch (IndexOutOfRangeException)
             {
-                WriteLine("Please, enter width of envelop and height of envelop like double.\n" +
-                    "Bouth of these values have to be more than 2 and less than 100\n");
+                WriteLine(ExceptionMessage.CREATE_ENVELOPE_HEIGHT);
 
-                _logger.Error("Amount of arguments was too small. " +
-                    "You need enter two arguments(double) into console, for example: dotnet run 3.4 23." +
-                    "Bouth of these values have to be more than 2 and less than 100");
+                _logger.Error(LoggerMessage.CHECK_FIRST_ENVELOPE_ERROR);
 
                 return default;
             }

@@ -1,5 +1,6 @@
 ﻿using NLog;
 
+using SecondTask.Messages;
 using SecondTask.Logic.Comonents;
 using SecondTask.Logic.UserInterface.Abstracts;
 
@@ -22,7 +23,7 @@ namespace SecondTask.Controllers
                 return true;
             }
 
-            _logger.Info("Envelopes were compared");
+            _logger.Info(LoggerMessage.COMPARE_ENVELOPES);
 
             return false;
         }
@@ -35,21 +36,21 @@ namespace SecondTask.Controllers
                 return true;
             }
 
-            _logger.Info("Envelopes were compared");
+            _logger.Info(LoggerMessage.COMPARE_ENVELOPES);
 
             return false;
         }
 
         public override void Display(string message)
         {
-            _logger.Info("Information was inputted in console");
+            _logger.Info(LoggerMessage.DISPLAY);
 
             ViewToDisplay.Display(message);
         }
 
         public override void SetEnvelop(Envelope newEnvelope)
         {
-            _logger.Info("New envelope was setted to model");
+            _logger.Info(LoggerMessage.SET_ENVELOPE);
 
             ViewToDisplay.ModelToView.SetnewEnvelope(newEnvelope);
         }
