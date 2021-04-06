@@ -103,18 +103,11 @@ namespace SecondTask
         {
             WriteLine(ExceptionMessage.SET_BOOLEAN_FLAGE);
 
-            switch (ReadLine().ToUpper()) 
+            flage = (ReadLine().ToUpper()) switch
             {
-                case "Y":
-                    flage = true;
-                    break;
-                case "YES":
-                    flage = true;
-                    break;
-                default:
-                    flage = false;
-                    break;
-            }
+                "Y" or "YES" => true,
+                _ => false,
+            };
         }
 
         private Controller GetController(Envelope comparisonEnvelope) 

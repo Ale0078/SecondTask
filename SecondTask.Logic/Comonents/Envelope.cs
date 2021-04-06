@@ -2,7 +2,7 @@
 
 namespace SecondTask.Logic.Comonents
 {
-    public class Envelope : IComparable<Envelope> //ToDo: IComparable
+    public class Envelope : IComparable<Envelope>
     {
         public double Width { get; private set; }
         public double Height { get; private set; }
