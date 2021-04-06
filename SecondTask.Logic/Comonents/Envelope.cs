@@ -1,6 +1,8 @@
-﻿namespace SecondTask.Logic.Comonents
+﻿using System;
+
+namespace SecondTask.Logic.Comonents
 {
-    public class Envelope
+    public class Envelope : IComparable<Envelope> //ToDo: IComparable
     {
         public double Width { get; private set; }
         public double Height { get; private set; }
@@ -11,38 +13,20 @@
             Height = envelopeHeight;
         }
 
-        /// <summary>
-        ///     Use it when you want to check if an envelope would fit in current envelope or not
-        /// </summary>
-        /// <returns>
-        ///     Return true if comparisonEnvelope can fit in current envelope and return false if cannot
-        /// </returns>
-        public bool Compare(Envelope comparisonEnvelope) 
+        public int CompareTo(Envelope comparisonEnvelope)
         {
-            if (Width > comparisonEnvelope.Width && Height > comparisonEnvelope.Height
-                || Height > comparisonEnvelope.Width && Width > comparisonEnvelope.Height) 
+            if (((Width > comparisonEnvelope.Width) && (Height > comparisonEnvelope.Height))
+                || ((Height > comparisonEnvelope.Width) && (Width > comparisonEnvelope.Height)))
             {
-                return true;
+                return -1;
+            }
+            else if (((Width < comparisonEnvelope.Width) && (Height < comparisonEnvelope.Height))
+                || ((Height < comparisonEnvelope.Width) && (Width < comparisonEnvelope.Height)))
+            {
+                return 1;
             }
 
-            return false;
-        }
-
-        /// <summary>
-        ///     Use it when you want to check if an envelope would fit in current envelope or not
-        /// </summary>
-        /// <returns>
-        ///     Return true if sides of comparisonEnvelope can fit in current envelope and return false if cannot
-        /// </returns>
-        public bool Compare(double comparisonWidth, double comparisionHeight) 
-        {
-            if ((Width > comparisonWidth && Height > comparisionHeight)
-                || (Height > comparisonWidth && Width > comparisionHeight))
-            {
-                return true;
-            }
-
-            return false;
+            return 0;
         }
     }
 }

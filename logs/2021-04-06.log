@@ -1,0 +1,109 @@
+2021-04-06 07:55:31.5471 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-06 07:55:31.5733 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-06 07:55:31.5733 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-06 07:55:31.5733 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-06 07:55:55.7693 | ERROR | LibToTasks.Validation.Transformator | Value 10 10 cannot be converted to System.Double
+2021-04-06 07:55:55.7693 | ERROR | SecondTask.Startup | System.FormatException: We cannot convert this value to System.Double
+   at LibToTasks.Validation.Transformator.ConfirmConversion[TResult,TValue](TValue valueToConverting) in D:\ElementaryTasksToSoftServe\MyLibToTasks\LibToTasks\Validation\Transformator.cs:line 35
+   at SecondTask.Startup.ConvertStringToDouble(String doubleValue) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 157
+   at SecondTask.Startup.GetCheckedDoubleFromString(String doubleValue) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 145
+   at SecondTask.Startup.CreateEnvelop() in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 84
+   at SecondTask.Startup.CheckSuitableOfEnvelopes(Controller envelopeController) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 71
+   at SecondTask.Startup.Start(String[] mainArguments) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 44: We cannot convert this value to System.Double
+2021-04-06 07:56:06.2283 | INFO | LibToTasks.Validation.Transformator | Value 12 can be converted to System.Double
+2021-04-06 07:56:06.2532 | INFO | LibToTasks.Validation.Validator | Value 12 passed checking
+2021-04-06 07:56:06.2532 | INFO | LibToTasks.Validation.Transformator | Value 12 can be converted to System.Double
+2021-04-06 07:56:06.2532 | INFO | LibToTasks.Validation.Validator | Value 12 passed checking
+2021-04-06 07:56:09.8536 | ERROR | LibToTasks.Validation.Transformator | Value 10 10 cannot be converted to System.Double
+2021-04-06 07:56:09.8536 | ERROR | SecondTask.Startup | System.FormatException: We cannot convert this value to System.Double
+   at LibToTasks.Validation.Transformator.ConfirmConversion[TResult,TValue](TValue valueToConverting) in D:\ElementaryTasksToSoftServe\MyLibToTasks\LibToTasks\Validation\Transformator.cs:line 35
+   at SecondTask.Startup.ConvertStringToDouble(String doubleValue) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 157
+   at SecondTask.Startup.GetCheckedDoubleFromString(String doubleValue) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 145
+   at SecondTask.Startup.CreateEnvelop() in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 84
+   at SecondTask.Startup.CheckSuitableOfEnvelopes(Controller envelopeController) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 71
+   at SecondTask.Startup.Start(String[] mainArguments) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 44: We cannot convert this value to System.Double
+2021-04-06 07:57:28.0712 | INFO | LibToTasks.Validation.Transformator | Value 12 can be converted to System.Double
+2021-04-06 07:57:28.0981 | INFO | LibToTasks.Validation.Validator | Value 12 passed checking
+2021-04-06 07:57:28.0981 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-06 07:57:28.0981 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-06 07:57:29.8199 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-06 07:57:29.8199 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-06 07:57:35.4865 | INFO | LibToTasks.Validation.Transformator | Value 11 can be converted to System.Double
+2021-04-06 07:57:35.4865 | INFO | LibToTasks.Validation.Validator | Value 11 passed checking
+2021-04-06 07:57:35.4865 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 07:57:35.4865 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:21:38.8493 | INFO | LibToTasks.Validation.Transformator | Value 32 can be converted to System.Double
+2021-04-06 08:21:38.8750 | INFO | LibToTasks.Validation.Validator | Value 32 passed checking
+2021-04-06 08:21:38.8750 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-06 08:21:38.8750 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-06 08:21:41.2698 | INFO | LibToTasks.Validation.Transformator | Value 9 can be converted to System.Double
+2021-04-06 08:21:41.2698 | INFO | LibToTasks.Validation.Validator | Value 9 passed checking
+2021-04-06 08:21:46.5064 | INFO | LibToTasks.Validation.Transformator | Value 33 can be converted to System.Double
+2021-04-06 08:21:46.5064 | INFO | LibToTasks.Validation.Validator | Value 33 passed checking
+2021-04-06 08:21:46.5064 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:21:46.5064 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:25:45.8967 | INFO | LibToTasks.Validation.Transformator | Value 32 can be converted to System.Double
+2021-04-06 08:25:45.9222 | INFO | LibToTasks.Validation.Validator | Value 32 passed checking
+2021-04-06 08:25:45.9222 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-06 08:25:45.9222 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-06 08:25:47.0254 | INFO | LibToTasks.Validation.Transformator | Value 9 can be converted to System.Double
+2021-04-06 08:25:47.0254 | INFO | LibToTasks.Validation.Validator | Value 9 passed checking
+2021-04-06 08:25:49.8495 | INFO | LibToTasks.Validation.Transformator | Value 33 can be converted to System.Double
+2021-04-06 08:25:49.8495 | INFO | LibToTasks.Validation.Validator | Value 33 passed checking
+2021-04-06 08:25:49.8495 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:25:49.8495 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:26:07.6449 | INFO | LibToTasks.Validation.Transformator | Value 31 can be converted to System.Double
+2021-04-06 08:26:07.6449 | INFO | LibToTasks.Validation.Validator | Value 31 passed checking
+2021-04-06 08:26:09.3770 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-06 08:26:09.3770 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-06 08:26:09.3770 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-06 08:26:16.3269 | INFO | LibToTasks.Validation.Transformator | Value 44 can be converted to System.Double
+2021-04-06 08:26:16.3278 | INFO | LibToTasks.Validation.Validator | Value 44 passed checking
+2021-04-06 08:26:17.5596 | INFO | LibToTasks.Validation.Transformator | Value 9 can be converted to System.Double
+2021-04-06 08:26:17.5596 | INFO | LibToTasks.Validation.Validator | Value 9 passed checking
+2021-04-06 08:26:17.5596 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:26:17.5596 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:26:29.8468 | INFO | LibToTasks.Validation.Transformator | Value 67 can be converted to System.Double
+2021-04-06 08:26:29.8468 | INFO | LibToTasks.Validation.Validator | Value 67 passed checking
+2021-04-06 08:26:30.1683 | INFO | LibToTasks.Validation.Transformator | Value 8 can be converted to System.Double
+2021-04-06 08:26:30.1683 | INFO | LibToTasks.Validation.Validator | Value 8 passed checking
+2021-04-06 08:26:30.1683 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-06 08:26:34.5777 | INFO | LibToTasks.Validation.Transformator | Value 67 can be converted to System.Double
+2021-04-06 08:26:34.5777 | INFO | LibToTasks.Validation.Validator | Value 67 passed checking
+2021-04-06 08:26:35.1605 | INFO | LibToTasks.Validation.Transformator | Value 8 can be converted to System.Double
+2021-04-06 08:26:35.1605 | INFO | LibToTasks.Validation.Validator | Value 8 passed checking
+2021-04-06 08:26:35.1605 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:26:35.1605 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:26:42.2342 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-06 08:26:42.2348 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-06 08:26:42.5475 | INFO | LibToTasks.Validation.Transformator | Value 5 can be converted to System.Double
+2021-04-06 08:26:42.5475 | INFO | LibToTasks.Validation.Validator | Value 5 passed checking
+2021-04-06 08:26:42.5475 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-06 08:26:45.4460 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-06 08:26:45.4460 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-06 08:26:46.0313 | INFO | LibToTasks.Validation.Transformator | Value 4 can be converted to System.Double
+2021-04-06 08:26:46.0313 | INFO | LibToTasks.Validation.Validator | Value 4 passed checking
+2021-04-06 08:26:46.0313 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:26:46.0313 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:27:01.3521 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-06 08:27:01.3521 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-06 08:27:01.9611 | INFO | LibToTasks.Validation.Transformator | Value 5 can be converted to System.Double
+2021-04-06 08:27:01.9611 | INFO | LibToTasks.Validation.Validator | Value 5 passed checking
+2021-04-06 08:27:01.9611 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-06 08:27:03.1350 | INFO | LibToTasks.Validation.Transformator | Value 5 can be converted to System.Double
+2021-04-06 08:27:03.1350 | INFO | LibToTasks.Validation.Validator | Value 5 passed checking
+2021-04-06 08:27:03.6173 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-06 08:27:03.6173 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-06 08:27:03.6173 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:27:03.6173 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-06 08:27:06.5157 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-06 08:27:06.5157 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-06 08:27:07.0900 | INFO | LibToTasks.Validation.Transformator | Value 5 can be converted to System.Double
+2021-04-06 08:27:07.0900 | INFO | LibToTasks.Validation.Validator | Value 5 passed checking
+2021-04-06 08:27:07.0900 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-06 08:27:08.8477 | INFO | LibToTasks.Validation.Transformator | Value 44 can be converted to System.Double
+2021-04-06 08:27:08.8477 | INFO | LibToTasks.Validation.Validator | Value 44 passed checking
+2021-04-06 08:27:11.7204 | INFO | LibToTasks.Validation.Transformator | Value 4 can be converted to System.Double
+2021-04-06 08:27:11.7204 | INFO | LibToTasks.Validation.Validator | Value 4 passed checking
+2021-04-06 08:27:11.7204 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-06 08:27:11.7204 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console

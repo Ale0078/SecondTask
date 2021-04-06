@@ -14,7 +14,6 @@ namespace SecondTask.Logic.UserInterface.Abstracts
 
         public abstract void SetEnvelop(Envelope newEnvelope);
         public abstract bool CompareEnvelopes(Envelope comparisonEnvelope);
-        public abstract bool CompareEnvelopes(double comparisonWidth, double comparisonHeight);
         public abstract void Display(string message);
     }
 }

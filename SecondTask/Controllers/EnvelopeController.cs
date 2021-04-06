@@ -17,26 +17,12 @@ namespace SecondTask.Controllers
 
         public override bool CompareEnvelopes(Envelope comparisonEnvelope)
         {
-            if (ViewToDisplay.ModelToView.EnvelopeToCompare.Compare(comparisonEnvelope)
-                || comparisonEnvelope.Compare(ViewToDisplay.ModelToView.EnvelopeToCompare)) 
-            {
-                return true;
-            }
-
             _logger.Info(LoggerMessage.COMPARE_ENVELOPES);
 
-            return false;
-        }
-
-        public override bool CompareEnvelopes(double comparisonWidth, double comparisonHeight)
-        {
-            if (ViewToDisplay.ModelToView.EnvelopeToCompare.Compare(comparisonWidth, comparisonHeight)
-                || new Envelope(comparisonWidth, comparisonHeight).Compare(ViewToDisplay.ModelToView.EnvelopeToCompare))
+            if (ViewToDisplay.ModelToView.EnvelopeToCompare.CompareTo(comparisonEnvelope) != 0) 
             {
                 return true;
-            }
-
-            _logger.Info(LoggerMessage.COMPARE_ENVELOPES);
+            }        
 
             return false;
         }

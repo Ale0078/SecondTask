@@ -103,9 +103,12 @@ namespace SecondTask
         {
             WriteLine(ExceptionMessage.SET_BOOLEAN_FLAGE);
 
-            switch (ReadKey().Key) 
+            switch (ReadLine().ToUpper()) 
             {
-                case ConsoleKey.Y:
+                case "Y":
+                    flage = true;
+                    break;
+                case "YES":
                     flage = true;
                     break;
                 default:
