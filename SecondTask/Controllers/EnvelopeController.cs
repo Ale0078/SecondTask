@@ -1,7 +1,7 @@
 ﻿using NLog;
 
 using SecondTask.Messages;
-using SecondTask.Logic.Comonents;
+using SecondTask.Logic.Comonents.Builders.Abstracts;
 using SecondTask.Logic.UserInterface.Abstracts;
 
 namespace SecondTask.Controllers
@@ -10,16 +10,17 @@ namespace SecondTask.Controllers
     {
         private ILogger _logger;
 
-        public EnvelopeController(View viewToDisplay) : base(viewToDisplay) 
+        public EnvelopeController(View viewToDisplay, Builder envelopeBuilder) : 
+            base(viewToDisplay, envelopeBuilder) 
         {
             _logger = LogManager.GetCurrentClassLogger();
         }
 
-        public override bool CompareEnvelopes(Envelope comparisonEnvelope)
+        public override bool CompareEnvelopes()
         {
             _logger.Info(LoggerMessage.COMPARE_ENVELOPES);
 
-            if (ViewToDisplay.ModelToView.EnvelopeToCompare.CompareTo(comparisonEnvelope) != 0) 
+            if (ViewToDisplay.ModelToView.EnvelopeToCompare.CompareTo(EnvelopeBuilder.Create()) != 0) 
             {
                 return true;
             }        
@@ -34,11 +35,18 @@ namespace SecondTask.Controllers
             ViewToDisplay.Display(message);
         }
 
-        public override void SetEnvelop(Envelope newEnvelope)
+        public override void SetEnvelop()
         {
             _logger.Info(LoggerMessage.SET_ENVELOPE);
 
-            ViewToDisplay.ModelToView.SetnewEnvelope(newEnvelope);
+            ViewToDisplay.ModelToView.SetnewEnvelope(EnvelopeBuilder.Create());
+        }
+
+        public override void SetBuilder(Builder envelopeBuilder)
+        {
+            EnvelopeBuilder = envelopeBuilder;
+
+            _logger.Info("New envelope builder has been setted");
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace SecondTask.Logic.Comonents
 {
-    public class Envelope : IEnvelope // ToDo: builder
+    internal class Envelope : IEnvelope
     {
         public double Width { get; private set; }
         public double Height { get; private set; }

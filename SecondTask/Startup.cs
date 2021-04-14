@@ -7,6 +7,8 @@ using SecondTask.Controllers;
 using SecondTask.Models;
 using SecondTask.Views;
 using SecondTask.Logic.Comonents;
+using SecondTask.Logic.Comonents.Builders;
+using SecondTask.Logic.Comonents.Builders.Abstracts;
 using SecondTask.Logic.UserInterface.Abstracts;
 using LibToTasks.Validation;
 
@@ -30,17 +32,16 @@ namespace SecondTask
 
         public void Start(string[] mainArguments) 
         {
-            Envelope comparisonEnvelope = CheckFirstEnvelope(mainArguments);
-
-            if (comparisonEnvelope == null) 
-            {
-                return;
-            }
-
-            Controller envelopeController = GetController(comparisonEnvelope);
-
             try
             {
+                Controller envelopeController = GetController(
+                    envelopeWidth: GetCheckedDoubleFromString(mainArguments[0]),
+                    envelopeHeight: GetCheckedDoubleFromString(mainArguments[1]));
+
+                envelopeController.SetEnvelop();
+
+                envelopeController.SetBuilder(CreateBuilder());
+
                 CheckSuitableOfEnvelopes(envelopeController);
 
                 SetBooleanFlage(out bool flage);
@@ -49,7 +50,11 @@ namespace SecondTask
 
                 while (flage)
                 {
-                    envelopeController.SetEnvelop(CreateEnvelop());
+                    envelopeController.SetBuilder(CreateBuilder());
+
+                    envelopeController.SetEnvelop();
+
+                    envelopeController.SetBuilder(CreateBuilder());
 
                     CheckSuitableOfEnvelopes(envelopeController);
 
@@ -57,6 +62,12 @@ namespace SecondTask
 
                     Clear();
                 }
+            }
+            catch (IndexOutOfRangeException)
+            {
+                WriteLine(ExceptionMessage.CREATE_ENVELOPE_HEIGHT);
+
+                _logger.Error(LoggerMessage.CHECK_FIRST_ENVELOPE_ERROR);
             }
             catch (FormatException ex)
             {
@@ -68,7 +79,7 @@ namespace SecondTask
 
         private void CheckSuitableOfEnvelopes(Controller envelopeController) 
         {
-            if (envelopeController.CompareEnvelopes(CreateEnvelop()))
+            if (envelopeController.CompareEnvelopes())
             {
                 envelopeController.Display(DisplayMessage.DISPLAY_SUETABLE);
             }
@@ -78,12 +89,12 @@ namespace SecondTask
             }
         }
 
-        private Envelope CreateEnvelop() 
+        private Builder CreateBuilder() 
         {
             Write(ExceptionMessage.CREATE_ENVELOPE_WIDTH);
             double widthOfEnvelope = GetCheckedDoubleFromString(ReadLine());
 
-            if (widthOfEnvelope == 0.0) 
+            if (widthOfEnvelope == 0.0)
             {
                 throw new FormatException(ExceptionMessage.FORMAT_EXCEPTION_WIDTH);
             }
@@ -96,7 +107,7 @@ namespace SecondTask
                 throw new FormatException(ExceptionMessage.FORMAT_EXCEPTION_HEIGHT);
             }
 
-            return new Envelope(widthOfEnvelope, heightofEnvelope);
+            return new EnvelopeBuilder(widthOfEnvelope, heightofEnvelope);
         }
 
         private void SetBooleanFlage(out bool flage) 
@@ -110,30 +121,12 @@ namespace SecondTask
             };
         }
 
-        private Controller GetController(Envelope comparisonEnvelope) 
+        private Controller GetController(double envelopeWidth, double envelopeHeight) 
         {
             return new EnvelopeController(
                 viewToDisplay: new EnvelopeView(
-                    viewModel: new EnvelopeViewModel(
-                        comparisonEnvelope: comparisonEnvelope)));
-        }
-
-        private Envelope CheckFirstEnvelope(string[] mainArguments) 
-        {
-            try
-            {
-                return new Envelope(
-                    envelopeWidth: GetCheckedDoubleFromString(mainArguments[0]),
-                    envelopeHeight: GetCheckedDoubleFromString(mainArguments[1]));
-            }
-            catch (IndexOutOfRangeException)
-            {
-                WriteLine(ExceptionMessage.CREATE_ENVELOPE_HEIGHT);
-
-                _logger.Error(LoggerMessage.CHECK_FIRST_ENVELOPE_ERROR);
-
-                return default;
-            }
+                    viewModel: new EnvelopeViewModel()),
+                envelopeBuilder: new EnvelopeBuilder(envelopeWidth, envelopeHeight));
         }
 
         private double GetCheckedDoubleFromString(string doubleValue) 

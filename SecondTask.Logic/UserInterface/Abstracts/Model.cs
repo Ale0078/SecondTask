@@ -1,17 +1,11 @@
-﻿using System;
-using SecondTask.Logic.Comonents;
+﻿using SecondTask.Logic.Comonents.Interfaces;
 
 namespace SecondTask.Logic.UserInterface.Abstracts
 {
     public abstract class Model
     {
-        public Envelope EnvelopeToCompare { get; protected set; }
+        public IEnvelope EnvelopeToCompare { get; protected set; }
 
-        public Model(Envelope envelopeToCompare) 
-        {
-            EnvelopeToCompare = envelopeToCompare;
-        }
-
-        public abstract void SetnewEnvelope(Envelope newEnvelope);
+        public abstract void SetnewEnvelope(IEnvelope newEnvelope);
     }
 }
