@@ -1,8 +1,8 @@
-﻿using System;
+﻿using SecondTask.Logic.Comonents.Interfaces;
 
 namespace SecondTask.Logic.Comonents
 {
-    public class Envelope : IComparable<Envelope>
+    public class Envelope : IEnvelope // ToDo: builder
     {
         public double Width { get; private set; }
         public double Height { get; private set; }
@@ -13,7 +13,7 @@ namespace SecondTask.Logic.Comonents
             Height = envelopeHeight;
         }
 
-        public int CompareTo(Envelope comparisonEnvelope)
+        public int CompareTo(IEnvelope comparisonEnvelope)
         {
             if (((Width > comparisonEnvelope.Width) && (Height > comparisonEnvelope.Height))
                 || ((Height > comparisonEnvelope.Width) && (Width > comparisonEnvelope.Height)))
