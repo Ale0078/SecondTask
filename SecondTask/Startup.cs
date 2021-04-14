@@ -6,11 +6,11 @@ using SecondTask.Messages;
 using SecondTask.Controllers;
 using SecondTask.Models;
 using SecondTask.Views;
-using SecondTask.Logic.Comonents;
 using SecondTask.Logic.Comonents.Builders;
 using SecondTask.Logic.Comonents.Builders.Abstracts;
 using SecondTask.Logic.UserInterface.Abstracts;
-using LibToTasks.Validation;
+using LibToTasks.Validation.Interfaces;
+using LibToTasks.Builders;
 
 namespace SecondTask
 {
@@ -19,15 +19,15 @@ namespace SecondTask
         private const double MAX_ENVELOPE_WIDTH_AND_HEIGHT = 100;
         private const double MIN_ENVELOPE_WIDTH_AND_HEIGHT = 2;
 
-        private Validator _validator;
-        private Transformator _transformator;
+        private IValidator _validator;
+        private ITransformator _transformator;
         private ILogger _logger;
 
         public Startup() 
         {
             _logger = LogManager.GetCurrentClassLogger();
-            _validator = new Validator();
-            _transformator = new Transformator();
+            _validator = new DefaultValidatorBuilder().Create();
+            _transformator = new DefaultTransformatorBuilder().Create();
         }
 
         public void Start(string[] mainArguments) 
