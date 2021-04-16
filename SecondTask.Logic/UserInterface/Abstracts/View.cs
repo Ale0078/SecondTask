@@ -1,15 +1,15 @@
-﻿using System;
+﻿using SecondTask.Logic.Comonents.Interfaces;
 
 namespace SecondTask.Logic.UserInterface.Abstracts
 {
     public abstract class View
     {
-        public Model ModelToView { get; }
+        public IEnvelope ModelToView { get; set; }
 
-        public View(Model modelToView) 
-        {
-            ModelToView = modelToView;
-        }
+        //public View(IEnvelope modelToView) 
+        //{
+        //    ModelToView = modelToView;
+        //}
 
         public abstract void Display(string message);
     }

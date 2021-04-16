@@ -4,7 +4,7 @@ using static System.Console;
 
 using SecondTask.Messages;
 using SecondTask.Controllers;
-using SecondTask.Models;
+//using SecondTask.Models;
 using SecondTask.Views;
 using SecondTask.Logic.Comonents.Builders;
 using SecondTask.Logic.Comonents.Builders.Abstracts;
@@ -32,6 +32,15 @@ namespace SecondTask
 
         public void Start(string[] mainArguments) 
         {
+            if (mainArguments.Length != 2) 
+            {
+                WriteLine(ExceptionMessage.USER_MESSAGE);
+
+                _logger.Error(ExceptionMessage.USER_MESSAGE);
+
+                return;
+            }
+
             try
             {
                 Controller envelopeController = GetController(
@@ -63,12 +72,6 @@ namespace SecondTask
                     Clear();
                 }
             }
-            catch (IndexOutOfRangeException)
-            {
-                WriteLine(ExceptionMessage.CREATE_ENVELOPE_HEIGHT);
-
-                _logger.Error(LoggerMessage.CHECK_FIRST_ENVELOPE_ERROR);
-            }
             catch (FormatException ex)
             {
                 _logger.Error(LoggerMessage.STARTUP_ERROR, ex, ex.Message);
@@ -94,7 +97,7 @@ namespace SecondTask
             Write(ExceptionMessage.CREATE_ENVELOPE_WIDTH);
             double widthOfEnvelope = GetCheckedDoubleFromString(ReadLine());
 
-            if (widthOfEnvelope == 0.0)
+            if (widthOfEnvelope == default)
             {
                 throw new FormatException(ExceptionMessage.FORMAT_EXCEPTION_WIDTH);
             }
@@ -102,7 +105,7 @@ namespace SecondTask
             Write(ExceptionMessage.CREATE_ENVELOPE_HEIGHT);
             double heightofEnvelope = GetCheckedDoubleFromString(ReadLine());
 
-            if (heightofEnvelope == 0.0)
+            if (heightofEnvelope == default)
             {
                 throw new FormatException(ExceptionMessage.FORMAT_EXCEPTION_HEIGHT);
             }
@@ -124,8 +127,7 @@ namespace SecondTask
         private Controller GetController(double envelopeWidth, double envelopeHeight) 
         {
             return new EnvelopeController(
-                viewToDisplay: new EnvelopeView(
-                    viewModel: new EnvelopeViewModel()),
+                viewToDisplay: new EnvelopeView(),
                 envelopeBuilder: new EnvelopeBuilder(envelopeWidth, envelopeHeight));
         }
 
@@ -133,7 +135,7 @@ namespace SecondTask
         {
             double envelopWidthHeight = ConvertStringToDouble(doubleValue);
 
-            if (_validator.CheckValue(CheckDouble, envelopWidthHeight, false)) 
+            if (_validator.CheckValue(CheckDouble, envelopWidthHeight, true)) 
             {
                 return envelopWidthHeight;
             }

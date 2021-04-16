@@ -1,0 +1,101 @@
+2021-04-16 13:57:32.1390 | ERROR | SecondTask.Startup | Amount of arguments was too small. You need enter two arguments(double) into console, for example: dotnet run 3.4 23.Bouth of these values have to be more than 2 and less than 100
+2021-04-16 13:58:22.6548 | ERROR | SecondTask.Startup | Amount of arguments was too small. You need enter two arguments(double) into console, for example: dotnet run 3.4 23.Bouth of these values have to be more than 2 and less than 100
+2021-04-16 13:59:02.0411 | ERROR | SecondTask.Startup | Amount of arguments was too small. You need enter two arguments(double) into console, for example: dotnet run 3.4 23.Bouth of these values have to be more than 2 and less than 100
+2021-04-16 13:59:36.3811 | INFO | LibToTasks.Validation.Transformator | Value 56 can be converted to System.Double
+2021-04-16 13:59:36.7962 | INFO | LibToTasks.Validation.Validator | Value 56 passed checking
+2021-04-16 13:59:36.7962 | INFO | LibToTasks.Validation.Transformator | Value 89 can be converted to System.Double
+2021-04-16 13:59:36.7962 | INFO | LibToTasks.Validation.Validator | Value 89 passed checking
+2021-04-16 13:59:36.7962 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 13:59:40.9648 | INFO | LibToTasks.Validation.Transformator | Value 80 can be converted to System.Double
+2021-04-16 13:59:40.9648 | INFO | LibToTasks.Validation.Validator | Value 80 passed checking
+2021-04-16 13:59:43.4457 | INFO | LibToTasks.Validation.Transformator | Value 50 can be converted to System.Double
+2021-04-16 13:59:43.4457 | INFO | LibToTasks.Validation.Validator | Value 50 passed checking
+2021-04-16 13:59:43.4457 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 13:59:43.4457 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-16 13:59:43.4457 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-16 14:00:04.3757 | ERROR | SecondTask.Startup | Amount of arguments was too small. You need enter two arguments(double) into console, for example: dotnet run 3.4 23.Bouth of these values have to be more than 2 and less than 100
+2021-04-16 14:00:04.3967 | INFO | LibToTasks.Validation.Transformator | Value 5 can be converted to System.Double
+2021-04-16 14:00:04.3967 | INFO | LibToTasks.Validation.Validator | Value 5 passed checking
+2021-04-16 14:00:55.4204 | ERROR | SecondTask.Startup | Amount of arguments was too small. You need enter two arguments(double) into console, for example: dotnet run 3.4 23.Bouth of these values have to be more than 2 and less than 100
+2021-04-16 14:01:14.1303 | INFO | LibToTasks.Validation.Transformator | Value -45 can be converted to System.Double
+2021-04-16 14:01:14.1549 | ERROR | LibToTasks.Validation.Validator | Value -45 didn`t pass checking
+2021-04-16 14:01:14.1549 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-16 14:01:14.1549 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-16 14:01:14.1549 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 14:01:19.0045 | INFO | LibToTasks.Validation.Transformator | Value 56 can be converted to System.Double
+2021-04-16 14:01:19.0045 | INFO | LibToTasks.Validation.Validator | Value 56 passed checking
+2021-04-16 14:01:19.8132 | INFO | LibToTasks.Validation.Transformator | Value 34 can be converted to System.Double
+2021-04-16 14:01:19.8132 | INFO | LibToTasks.Validation.Validator | Value 34 passed checking
+2021-04-16 14:01:19.8132 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:01:19.8132 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-16 14:01:19.8132 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-16 14:02:56.2872 | ERROR | SecondTask.Startup | Amount of arguments was too small. You need enter two arguments(double) into console, for example: dotnet run 3.4 23.Bouth of these values have to be more than 2 and less than 100
+2021-04-16 14:04:16.4291 | ERROR | SecondTask.Startup | Please, enter width of envelop and height of envelop like double.
+Bouth of these values have to be more than 2 and less than 100
+
+2021-04-16 14:04:23.4739 | INFO | LibToTasks.Validation.Transformator | Value -5 can be converted to System.Double
+2021-04-16 14:04:23.4983 | ERROR | LibToTasks.Validation.Validator | Value -5 didn`t pass checking
+2021-04-16 14:04:23.4983 | INFO | LibToTasks.Validation.Transformator | Value 6 can be converted to System.Double
+2021-04-16 14:04:23.4983 | INFO | LibToTasks.Validation.Validator | Value 6 passed checking
+2021-04-16 14:04:23.4983 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 14:04:26.9597 | INFO | LibToTasks.Validation.Transformator | Value 7 can be converted to System.Double
+2021-04-16 14:04:26.9597 | INFO | LibToTasks.Validation.Validator | Value 7 passed checking
+2021-04-16 14:04:28.0225 | INFO | LibToTasks.Validation.Transformator | Value 8 can be converted to System.Double
+2021-04-16 14:04:28.0225 | INFO | LibToTasks.Validation.Validator | Value 8 passed checking
+2021-04-16 14:04:28.0225 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:04:28.0225 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-16 14:04:28.0225 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-16 14:05:04.3448 | INFO | LibToTasks.Validation.Transformator | Value 56 can be converted to System.Double
+2021-04-16 14:05:04.3747 | INFO | LibToTasks.Validation.Validator | Value 56 passed checking
+2021-04-16 14:05:04.3747 | INFO | LibToTasks.Validation.Transformator | Value 89 can be converted to System.Double
+2021-04-16 14:05:04.3747 | INFO | LibToTasks.Validation.Validator | Value 89 passed checking
+2021-04-16 14:05:04.3747 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 14:05:05.9410 | INFO | LibToTasks.Validation.Transformator | Value 45 can be converted to System.Double
+2021-04-16 14:05:05.9410 | INFO | LibToTasks.Validation.Validator | Value 45 passed checking
+2021-04-16 14:05:07.0485 | INFO | LibToTasks.Validation.Transformator | Value 78 can be converted to System.Double
+2021-04-16 14:05:07.0485 | INFO | LibToTasks.Validation.Validator | Value 78 passed checking
+2021-04-16 14:05:07.0485 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:05:07.0485 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-16 14:05:07.0485 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-16 14:05:10.8224 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-16 14:05:10.8224 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-16 14:05:12.1458 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-16 14:05:12.1458 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-16 14:05:12.1458 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:05:12.1458 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 14:05:13.8105 | INFO | LibToTasks.Validation.Transformator | Value 11 can be converted to System.Double
+2021-04-16 14:05:13.8105 | INFO | LibToTasks.Validation.Validator | Value 11 passed checking
+2021-04-16 14:05:14.4264 | INFO | LibToTasks.Validation.Transformator | Value 2 can be converted to System.Double
+2021-04-16 14:05:14.4264 | INFO | LibToTasks.Validation.Validator | Value 2 passed checking
+2021-04-16 14:05:14.4264 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:05:14.4264 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-16 14:05:14.4264 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-16 14:05:18.6156 | INFO | LibToTasks.Validation.Transformator | Value 10 can be converted to System.Double
+2021-04-16 14:05:18.6156 | INFO | LibToTasks.Validation.Validator | Value 10 passed checking
+2021-04-16 14:05:19.1136 | INFO | LibToTasks.Validation.Transformator | Value 12 can be converted to System.Double
+2021-04-16 14:05:19.1136 | INFO | LibToTasks.Validation.Validator | Value 12 passed checking
+2021-04-16 14:05:19.1136 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:05:19.1136 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 14:05:19.9890 | INFO | LibToTasks.Validation.Transformator | Value 11 can be converted to System.Double
+2021-04-16 14:05:19.9890 | INFO | LibToTasks.Validation.Validator | Value 11 passed checking
+2021-04-16 14:05:24.1874 | INFO | LibToTasks.Validation.Transformator | Value 11 can be converted to System.Double
+2021-04-16 14:05:24.1874 | INFO | LibToTasks.Validation.Validator | Value 11 passed checking
+2021-04-16 14:05:24.1874 | INFO | SecondTask.Controllers.EnvelopeController | New envelope builder has been setted
+2021-04-16 14:05:24.1874 | INFO | SecondTask.Controllers.EnvelopeController | Envelopes were compared
+2021-04-16 14:05:24.1874 | INFO | SecondTask.Controllers.EnvelopeController | Information was inputted in console
+2021-04-16 14:06:55.7707 | INFO | LibToTasks.Validation.Transformator | Value -5 can be converted to System.Double
+2021-04-16 14:06:55.7957 | ERROR | LibToTasks.Validation.Validator | Value -5 didn`t pass checking
+2021-04-16 14:06:55.7957 | INFO | LibToTasks.Validation.Transformator | Value 6 can be converted to System.Double
+2021-04-16 14:06:55.7957 | INFO | LibToTasks.Validation.Validator | Value 6 passed checking
+2021-04-16 14:06:55.7957 | INFO | SecondTask.Controllers.EnvelopeController | New envelope was setted to model
+2021-04-16 14:08:23.4459 | INFO | LibToTasks.Validation.Transformator | Value -4 can be converted to System.Double
+2021-04-16 14:08:23.4459 | ERROR | LibToTasks.Validation.Validator | Value -4 didn`t pass checking
+2021-04-16 14:08:23.4459 | ERROR | SecondTask.Startup | System.FormatException: Width of envelop has to be more than 2 and less than 100.
+   at SecondTask.Startup.CreateBuilder() in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 102
+   at SecondTask.Startup.Start(String[] mainArguments) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 52: Width of envelop has to be more than 2 and less than 100.
+2021-04-16 14:09:08.4246 | INFO | LibToTasks.Validation.Transformator | Value -5 can be converted to System.Double
+2021-04-16 14:09:08.4487 | ERROR | LibToTasks.Validation.Validator | Value -5 didn`t pass checking
+2021-04-16 14:09:08.4487 | ERROR | SecondTask.Startup | System.FormatException: Yuor value too small or big
+   at LibToTasks.Validation.Validator.CheckValue[T](Func`2 checking, T valueToChecking, Boolean withException) in D:\ElementaryTasksToSoftServe\MyLibToTasks\LibToTasks\Validation\Validator.cs:line 30
+   at SecondTask.Startup.GetCheckedDoubleFromString(String doubleValue) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 138
+   at SecondTask.Startup.Start(String[] mainArguments) in D:\ElementaryTasksToSoftServe\SecondTask\SecondTask\Startup.cs:line 46: Yuor value too small or big

@@ -20,7 +20,7 @@ namespace SecondTask.Controllers
         {
             _logger.Info(LoggerMessage.COMPARE_ENVELOPES);
 
-            if (ViewToDisplay.ModelToView.EnvelopeToCompare.CompareTo(EnvelopeBuilder.Create()) != 0) 
+            if (ViewToDisplay.ModelToView.CompareTo(EnvelopeBuilder.Create()) != 0) 
             {
                 return true;
             }        
@@ -39,7 +39,7 @@ namespace SecondTask.Controllers
         {
             _logger.Info(LoggerMessage.SET_ENVELOPE);
 
-            ViewToDisplay.ModelToView.SetnewEnvelope(EnvelopeBuilder.Create());
+            ViewToDisplay.ModelToView = EnvelopeBuilder.Create();
         }
 
         public override void SetBuilder(Builder envelopeBuilder)

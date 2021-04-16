@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SecondTask.Logic.Comonents.Envelope">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comonents\Envelope.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SecondTask.Logic.Comonents.Builders.Abstracts.Builder">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAEAAAAAIAAAAAAA=</HashCode>
+      <FileName>Comonents\Builders\Abstracts\Builder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondTask.Logic.Comonents.Builders.EnvelopeBuilder">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comonents\Builders\EnvelopeBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SecondTask.Logic.UserInterface.Abstracts.Controller">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAEAAAAAAQAAAAABAAAEAAAAAAAAQAA=</HashCode>
+      <FileName>UserInterface\Abstracts\Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EnvelopeBuilder" />
+      <Property Name="ViewToDisplay" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecondTask.Logic.UserInterface.Abstracts.Model">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>UserInterface\Abstracts\Model.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EnvelopeToCompare" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SecondTask.Logic.UserInterface.Abstracts.View">
+    <Position X="8.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UserInterface\Abstracts\View.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ModelToView" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="SecondTask.Logic.Comonents.Interfaces.IEnvelope">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comonents\Interfaces\IEnvelope.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
